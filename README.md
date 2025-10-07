@@ -18,7 +18,6 @@ url = f"https://bigsoundbank.com/UPLOAD/mp3/{file_name}"
 
 urllib.request.urlretrieve(url, file_name)
 sound_data, samplerate = librosa.load(file_name)  # sr=None keeps the original sample rate
-print(samplerate)
 
 display.display(display.Audio(data=sound_data, rate=samplerate))
 ```
